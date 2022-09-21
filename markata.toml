@@ -58,6 +58,22 @@ card_template="""
 """
 
 
+[markata.feeds.automatic1111]
+title="Olivet"
+filter="' 'in title"
+reverse="True"
+card_template="""
+<li class='post'>
+    <a href='/stable-diffusion-pype-dev/{{ title.replace(".png", ".webp") }}'>
+        <img src='/stable-diffusion-pype-dev/{{ title.replace(".png", ".webp") }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
+    </a>
+    <details>
+        <summary> command </summary>
+        {{ command }} 
+    </details>
+</li>
+"""
+
 [markata.feeds.olivet]
 title="Olivet"
 filter="'Genesis'in command"
