@@ -53,7 +53,7 @@ card_template="""
 
 [[markata.seo]]
 name = "theme-color"
-content="#322D39"
+content="#64A1DD"
 
 [[markata.seo]]
 name = "twitter:creator"
