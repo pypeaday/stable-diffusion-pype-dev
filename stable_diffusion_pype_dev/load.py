@@ -21,6 +21,7 @@ class Prompt:
         self.params = {p[1]: p[2:] for p in self.command.split('"')[2].split()}
         self.height = self.params["H"]
         self.width = self.params["W"]
+        self.app_source = "dream-console"
 
     def __getitem__(self, key):
         return self.to_dict()[key]
@@ -46,6 +47,7 @@ class WebPrompt:
         self.height = self.data["height"]
         self.width = self.data["width"]
         self.command = json.dumps(self.data)
+        self.app_source = "dream-web"
 
     def __getitem__(self, key):
         return self.to_dict()[key]
@@ -70,6 +72,7 @@ class AUTOMATIC111WebPrompt:
         self.height = None
         self.width = None
         self.command = self.file.name
+        self.app_source = "automatic1111"
 
     def __getitem__(self, key):
         return self.to_dict()[key]

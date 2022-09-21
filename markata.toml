@@ -60,7 +60,7 @@ card_template="""
 
 [markata.feeds.automatic1111]
 title="Olivet"
-filter="' 'in title"
+filter="'automatic1111'in {{app_source}}"
 reverse="True"
 card_template="""
 <li class='post'>
