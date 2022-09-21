@@ -1,6 +1,6 @@
 [markata]
 assets_dir = "static"
-icon = "8bitcc.png"
+icon = "me.jpg"
 description = "Stable Diffusion image store"
 url = "https://pypeaday.github.io/stable-diffusion-pype-dev/"
 body_width='100vw'
