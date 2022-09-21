@@ -66,7 +66,7 @@ class AUTOMATIC111WebPrompt:
         self.title = self.file.name
         self.webp = self.file.with_suffix(".webp")
         self.slug = self.file.name
-        self.prompt = self.data["prompt"]
+        self.prompt = self.file.name
         self.height = None
         self.width = None
         self.command = self.file.name
