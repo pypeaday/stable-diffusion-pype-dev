@@ -6,6 +6,12 @@ url = "https://pypeaday.github.io/stable-diffusion-pype-dev/"
 body_width='100vw'
 edit=false
 
+color_link = "#64a1dd"
+color_accent = "#83dcc8cc"
+color_bg = '#1f2022'
+color_text = '#d8ebe6'
+
+
 
 hooks = [
 "markata.plugins.base_cli",
