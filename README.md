@@ -1,5 +1,7 @@
 # stable-diffusion-pype-dev
 
+[Check it out here!](https://pypeaday.github.io/stable-diffusion-pype-dev/)
+
 [![PyPI - Version](https://img.shields.io/pypi/v/stable-diffusion-pype-dev.svg)](https://pypi.org/project/stable-diffusion-pype-dev)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/stable-diffusion-pype-dev.svg)](https://pypi.org/project/stable-diffusion-pype-dev)
 
