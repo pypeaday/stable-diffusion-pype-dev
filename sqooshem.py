@@ -7,7 +7,6 @@ other_files = Path("AUTOMATIC111-images").glob("*.png")
 all_files = list(files) + list(other_files)
 
 for file in all_files:
-    print(f"checking {file}")
     if file.with_suffix(".webp").exists():
         continue
     # Keeping images from AUTOMATIC111's webui in their own folder cause it
