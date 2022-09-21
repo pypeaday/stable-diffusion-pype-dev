@@ -40,10 +40,7 @@ li {
 
 """
 
-[markata.feeds.archive]
-title="archive"
-filter="True"
-reverse="True"
+[markata.feeds_config]
 card_template="""
 <li class='post'>
     <a href='/stable-diffusion-pype-dev/{{ title.replace(".png", ".webp") }}'>
@@ -56,6 +53,14 @@ card_template="""
 </li>
 """
 
+
+[markata.feeds.archive]
+title="archive"
+filter="True"
+reverse="True"
+
+[markata.feeds.olivet]
+filter="'Genesis'in command"
 
 [[markata.seo]]
 name = "theme-color"
