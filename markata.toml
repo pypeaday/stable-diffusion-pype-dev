@@ -1,16 +1,10 @@
 [markata]
 assets_dir = "static"
-icon = "me.jpg"
-description = "Stable Diffusion image store"
-url = "https://pypeaday.github.io/stable-diffusion-pype-dev/"
+icon = "8bitcc.png"
+description = "Waylon Walker's Stable Diffusions"
+url = "stable-diffusion.waylonwalker.com"
 body_width='100vw'
 edit=false
-
-color_link = "#64a1dd"
-color_accent = "#83dcc8cc"
-color_bg = '#1f2022'
-color_text = '#d8ebe6'
-
 
 
 hooks = [
@@ -46,8 +40,8 @@ filter="True"
 reverse="True"
 card_template="""
 <li class='post'>
-    <a href='/stable-diffusion-pype-dev/{{ title.replace(".png", ".webp") }}'>
-        <img src='/stable-diffusion-pype-dev/{{ title.replace(".png", ".webp") }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
+    <a href='/{{ title.replace("png", "webp") }}'>
+        <img src='/{{ title.replace("png", "webp") }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
     </a>
     <details>
         <summary> command </summary>
@@ -55,15 +49,6 @@ card_template="""
     </details>
 </li>
 """
-
-
-[[markata.seo]]
-name = "theme-color"
-content="#64A1DD"
-
-[[markata.seo]]
-name = "twitter:creator"
-content="@pypeaday"
 
 [[markata.seo]]
 name = "og:type"
@@ -73,14 +58,22 @@ content = "article"
 [[markata.seo]]
 name = "og:author"
 property = "og:author"
-content = "Pypeaday"
+content = "Waylon Walker"
 
 [[markata.seo]]
 name = "og:site_name"
 property = "og:site_name"
-content = "Pypeaday"
+content = "Waylon Walker"
 
+[[markata.seo]]
+name = "theme-color"
+content="#322D39"
+
+[[markata.seo]]
+name = "twitter:creator"
+content="@_waylonwalker"
 
 [markata.prevnext]
 prevnext_color_angle = "#ff66c4"
+
 
