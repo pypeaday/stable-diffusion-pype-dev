@@ -57,6 +57,30 @@ class WebPrompt:
         return vars(self)
 
 
+@dataclass
+class AUTOMATIC111WebPrompt:
+    file: Path
+    status: str = "published"
+
+    def __post_init__(self):
+        self.title = self.file.name
+        self.webp = self.file.with_suffix(".webp")
+        self.slug = self.file.name
+        self.prompt = self.data["prompt"]
+        self.height = None
+        self.width = None
+        self.command = self.file.name
+
+    def __getitem__(self, key):
+        return self.to_dict()[key]
+
+    def keys(self):
+        return self.to_dict().keys()
+
+    def to_dict(self):
+        return vars(self)
+
+
 @hook_impl
 def configure(markata) -> None:
     markata.content_directories = [Path("static")]
@@ -73,11 +97,15 @@ def load(markata) -> None:
     ]
 
     prompts = Path("dream_web_log.txt").read_text().split("\n")
-    web_based_articles: List[Prompt] = []
+    web_based_articles: List[WebPrompt] = []
     for p in prompts:
         if len(pair := p.split(":")) == 16:
             file, raw_data = Path(pair[0]), pair[1:]
             data = json.loads(":".join(raw_data))
             web_based_articles.append(WebPrompt(file, data))
 
+    automatic111_data = Path("AUTOMATIC111-images").glob("*.png")
+    automatic111_articles = [AUTOMATIC111WebPrompt(f) for f in automatic111_data]
+
     markata.articles += web_based_articles
+    markata.articles += automatic111_articles
