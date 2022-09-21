@@ -1,0 +1,64 @@
+[markata]
+assets_dir = "static"
+icon = "8bitcc.png"
+description = "Stable Diffusion image store"
+url = "https://pypeaday.github.io/stable-diffusion-pype-dev/"
+body_width='100vw'
+edit=false
+
+
+hooks = [
+"markata.plugins.base_cli",
+"markata.plugins.tui",
+"markata.plugins.copy_assets",
+"markata.plugins.feeds",
+"stable_diffusion_pype_dev.load"
+]
+
+[[markata.head]]
+text = """
+<style>
+img {
+width: 100%;
+height: auto;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  flex: 1 2 400px;
+}
+</style>
+
+"""
+
+[markata.feeds.archive]
+title="archive"
+filter="True"
+reverse="True"
+card_template="""
+<li class='post'>
+    <a href='/stable-diffusion-pype-dev/{{ title.replace(".png", ".webp") }}'>
+        <img src='/stable-diffusion-pype-dev/{{ title.replace(".png", ".webp") }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
+    </a>
+    <details>
+        <summary> command </summary>
+        {{ command }} 
+    </details>
+</li>
+"""
+
+
+[[markata.seo]]
+name = "theme-color"
+content="#322D39"
+
+[[markata.seo]]
+name = "twitter:creator"
+content="@pypeaday"
+
+[markata.prevnext]
+prevnext_color_angle = "#ff66c4"
+

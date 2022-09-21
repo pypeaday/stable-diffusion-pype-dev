@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "stable-diffusion-pype-dev"
+description = ''
+readme = "README.md"
+requires-python = ">=3.7"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Pypeaday", email = "pypeaday@pm.me" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = ["markata"]
+dynamic = ["version"]
+
+[project.urls]
+Documentation = "https://github.com/unknown/stable-diffusion-pype-dev#readme"
+Issues = "https://github.com/unknown/stable-diffusion-pype-dev/issues"
+Source = "https://github.com/unknown/stable-diffusion-pype-dev"
+
+[tool.hatch.version]
+path = "stable_diffusion_pype_dev/__about__.py"
+
+[tool.hatch.envs.default.scripts]
+dream = "cd ../stable-diffusion/ && .venv/bin/python scripts/dream.py --outdir ../stable-diffusion-pype-dev/original"
+clean = "markata clean"
+build = "markata build"
+tui = "markata tui"
+serve = "python -m http.server 8000 --directory=markout"
+clean-build = ['clean', 'build',]
+build-serve = ['clean', 'build', 'tui']
+

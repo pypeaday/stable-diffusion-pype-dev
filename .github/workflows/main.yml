@@ -1,0 +1,22 @@
+name: Deploy
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      - run: pip install hatch markata
+      - run: hatch env create
+      - run: hatch run clean-build
+      - name: GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: crazy-max/ghaction-github-pages@v2.6.0
+        with:
+          target_branch: markout
+          build_dir: markout
+          jekyll: false
