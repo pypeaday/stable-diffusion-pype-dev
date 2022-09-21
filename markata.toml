@@ -40,7 +40,11 @@ li {
 
 """
 
-[markata.feeds_config]
+
+[markata.feeds.archive]
+title="archive"
+filter="True"
+reverse="True"
 card_template="""
 <li class='post'>
     <a href='/stable-diffusion-pype-dev/{{ title.replace(".png", ".webp") }}'>
@@ -54,13 +58,21 @@ card_template="""
 """
 
 
-[markata.feeds.archive]
-title="archive"
-filter="True"
-reverse="True"
-
 [markata.feeds.olivet]
+title="Olivet"
 filter="'Genesis'in command"
+reverse="True"
+card_template="""
+<li class='post'>
+    <a href='/stable-diffusion-pype-dev/{{ title.replace(".png", ".webp") }}'>
+        <img src='/stable-diffusion-pype-dev/{{ title.replace(".png", ".webp") }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
+    </a>
+    <details>
+        <summary> command </summary>
+        {{ command }} 
+    </details>
+</li>
+"""
 
 [[markata.seo]]
 name = "theme-color"
