@@ -168,5 +168,5 @@ markout/*
 .markata.cache/*
 
 static/*.png
-AUTOMATIC111-images/*
+AUTOMATIC1111-images/*
 InvokeAI-images/*
