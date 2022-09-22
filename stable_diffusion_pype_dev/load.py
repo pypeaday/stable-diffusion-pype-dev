@@ -6,6 +6,9 @@ from typing import List
 
 from markata.hookspec import hook_impl, register_attr
 
+with open("source_app_map.json", "r") as f:
+    source_app_map = json.load(f)
+
 
 @dataclass
 class Prompt:
@@ -15,9 +18,6 @@ class Prompt:
 
     def __post_init__(self):
         self.title = self.file.name
-        self.webp = Path(
-            str(self.file).replace("InvokeAI-images", "static")
-        ).with_suffix(".webp")
         self.slug = self.file.name
         self.prompt = self.command.split('"')[1]
         self.params = {p[1]: p[2:] for p in self.command.split('"')[2].split()}
@@ -43,9 +43,6 @@ class WebPrompt:
 
     def __post_init__(self):
         self.title = self.file.name
-        self.webp = Path(
-            str(self.file).replace("InvokeAI-images", "static")
-        ).with_suffix(".webp")
         self.slug = self.file.name
         self.prompt = self.data["prompt"]
         self.height = self.data["height"]
@@ -69,11 +66,7 @@ class AUTOMATIC1111WebPrompt:
     status: str = "published"
 
     def __post_init__(self):
-
         self.title = self.file.name
-        self.webp = Path(
-            str(self.file).replace("AUTOMATIC1111-images", "static")
-        ).with_suffix(".webp")
         self.slug = self.file.name
         self.prompt = self.file.name
         self.height = None
@@ -114,7 +107,11 @@ def load(markata) -> None:
             data = json.loads(":".join(raw_data))
             web_based_articles.append(WebPrompt(file, data))
 
-    automatic1111_data = Path("AUTOMATIC1111-images").glob("*.webp")
+    automatic1111_data = (
+        Path("static", Path(k).with_suffix(".webp"))
+        for k, v in source_app_map.items()
+        if v == "AUTOMATIC1111"
+    )
     automatic1111_articles = [AUTOMATIC1111WebPrompt(f) for f in automatic1111_data]
 
     markata.articles += web_based_articles
