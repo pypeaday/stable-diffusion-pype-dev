@@ -42,7 +42,7 @@ for file in autos_files:
         print(f"{file.name} exists in webp version in static")
         if file.name not in source_app_map.keys():
             print(f"{file.name} did not exist in source_app_map")
-            source_app_map[file.name] = "AUTOMATIC11111"
+            source_app_map[file.name] = "AUTOMATIC1111"
         continue
 
     cmd = (
