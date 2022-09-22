@@ -15,7 +15,9 @@ class Prompt:
 
     def __post_init__(self):
         self.title = self.file.name
-        self.webp = self.file.with_suffix(".webp")
+        self.webp = Path(
+            str(self.file).replace("InvokeAI-images", "static")
+        ).with_suffix(".webp")
         self.slug = self.file.name
         self.prompt = self.command.split('"')[1]
         self.params = {p[1]: p[2:] for p in self.command.split('"')[2].split()}
@@ -41,7 +43,9 @@ class WebPrompt:
 
     def __post_init__(self):
         self.title = self.file.name
-        self.webp = self.file.with_suffix(".webp")
+        self.webp = Path(
+            str(self.file).replace("InvokeAI-images", "static")
+        ).with_suffix(".webp")
         self.slug = self.file.name
         self.prompt = self.data["prompt"]
         self.height = self.data["height"]
@@ -65,16 +69,11 @@ class AUTOMATIC1111WebPrompt:
     status: str = "published"
 
     def __post_init__(self):
-        self.file = Path(str(self.file.replace("AUTOMATIC1111-images", "static")))
-        if not self.file.exists():
-            print(
-                f"WARNING: {self.file.name} does not exist - run refresh-and-push or handle sqooshing the images apporpiately yourself!"
-            )
-            import sys
 
-            sys.exit(1)
         self.title = self.file.name
-        self.webp = self.file.with_suffix(".webp")
+        self.webp = Path(
+            str(self.file).replace("AUTOMATIC111-images", "static")
+        ).with_suffix(".webp")
         self.slug = self.file.name
         self.prompt = self.file.name
         self.height = None
