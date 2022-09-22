@@ -35,15 +35,12 @@ git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 
 3. Setup the stable-diffusion application repos as you wish - this isn't a
    guide supplementing either of their setup instructions at all
-4. To combine outputs from invoke-ai's console app, their webapp, and AUTOMATIC1111's webapp reference my `refresh-and-push` script and use as is appropriate for you
 
-    summary: It basically copies images and prompt files from the Invoke-AI repo setup to stable-diffusion-pype-dev so that `load.py` can create markata articles appropriately from images from either entrypoint of the model
-    It also copies AUTOMATIC1111's images into their own ignored directory
-    because of the process flow of `sqoosh` which re-encodes all the `png`
-    images into `webp` for storage. Those images are named after their prompts
-    though, which is a different saving model than the other project, so
-    `sqooshem.py` takes that into account and the `refresh-and-push` script
-    moves things around appropriately
+4. Run `stage-images.sh` which will copy all pngs from both stable-diffusion
+   repos into source folders in this project, as well as the prompt logs from
+   InvokeAI's dream server(s). And then it'll run `sqooshem.py` which will log
+   to a json where each image (by name) came from and sqoosh the png into a
+   webp and put that in `static`
 
 The following command will get you a markata site with images and commands displayed!
 
