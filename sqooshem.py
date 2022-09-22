@@ -22,17 +22,6 @@ for file in files:
     proc.wait()
 
 for file in autos_files:
-    # Keeping images from AUTOMATIC111's webui in their own folder cause it
-    # makes loading them easier right now by relying on the image name as the
-    # prompt, so here since the source images/pngs are not in static, but the
-    # webp versions are I just need to check static instead of the source image
-    # folder
-    # if (
-    #     Path(str(file).replace("AUTOMATIC111-images", "static"))
-    #     .with_suffix(".webp")
-    #     .exists()
-    # ):
-    #     continue
     if (
         Path(str(file).replace("AUTOMATIC111-images", "static"))
         .with_suffix(".webp")
