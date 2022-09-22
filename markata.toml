@@ -68,6 +68,10 @@ card_template="""
         <img src='/stable-diffusion-pype-dev/{{ title.replace(".png", ".webp") }}' alt='{{ prompt }}'>
     </a>
     <details>
+        <summary> filter </summary>
+        {{ app_source }} 
+    </details>
+    <details>
         <summary> command </summary>
         {{ command }} 
     </details>
@@ -116,4 +120,3 @@ content = "Pypeaday"
 
 [markata.prevnext]
 prevnext_color_angle = "#ff66c4"
-
