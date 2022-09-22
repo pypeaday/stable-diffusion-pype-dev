@@ -72,7 +72,7 @@ class AUTOMATIC1111WebPrompt:
 
         self.title = self.file.name
         self.webp = Path(
-            str(self.file).replace("AUTOMATIC111-images", "static")
+            str(self.file).replace("AUTOMATIC1111-images", "static")
         ).with_suffix(".webp")
         self.slug = self.file.name
         self.prompt = self.file.name
