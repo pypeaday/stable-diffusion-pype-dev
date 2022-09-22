@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-rsync -r /home/nic/personal/stable-diffusion/outputs/img-samples/ static
+rsync -r /home/nic/personal/stable-diffusion/outputs/img-samples/ InvokeAI-images
 
 cp /home/nic/personal/stable-diffusion/outputs/img-samples/dream_log.txt dream_log.txt
 cp /home/nic/personal/stable-diffusion/outputs/img-samples/dream_web_log.txt dream_web_log.txt
