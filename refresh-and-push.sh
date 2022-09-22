@@ -11,11 +11,8 @@ rsync -r /home/nic/third-party/stable-diffusion-webui/outputs/txt2img-images/ AU
 
 python sqooshem.py
 
-rsync -r AUTOMATIC111-images/*.webp static
-
 git add ./dream_log.txt
 git add ./dream_web_log.txt
-rm -rf static/*.png  # idk why I need this.. something messed up
 
 git add ./static
 
