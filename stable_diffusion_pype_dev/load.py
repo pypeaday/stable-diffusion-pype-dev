@@ -60,11 +60,19 @@ class WebPrompt:
 
 
 @dataclass
-class AUTOMATIC111WebPrompt:
+class AUTOMATIC1111WebPrompt:
     file: Path
     status: str = "published"
 
     def __post_init__(self):
+        self.file = Path(str(self.file.replace("AUTOMATIC1111-images", "static")))
+        if not self.file.exists():
+            print(
+                f"WARNING: {self.file.name} does not exist - run refresh-and-push or handle sqooshing the images apporpiately yourself!"
+            )
+            import sys
+
+            sys.exit(1)
         self.title = self.file.name
         self.webp = self.file.with_suffix(".webp")
         self.slug = self.file.name
@@ -107,8 +115,8 @@ def load(markata) -> None:
             data = json.loads(":".join(raw_data))
             web_based_articles.append(WebPrompt(file, data))
 
-    automatic111_data = Path("AUTOMATIC111-images").glob("*.png")
-    automatic111_articles = [AUTOMATIC111WebPrompt(f) for f in automatic111_data]
+    automatic1111_data = Path("AUTOMATIC1111-images").glob("*.webp")
+    automatic1111_articles = [AUTOMATIC1111WebPrompt(f) for f in automatic1111_data]
 
     markata.articles += web_based_articles
-    markata.articles += automatic111_articles
+    markata.articles += automatic1111_articles
