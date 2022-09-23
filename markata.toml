@@ -2,7 +2,7 @@
 assets_dir = "static"
 icon = "me.jpg"
 description = "Stable Diffusion image store"
-url = "https://pypeaday.github.io/stable-diffusion-pype-dev/"
+url = "https:/pypeaday.github.io/"
 body_width='100vw'
 edit=false
 
@@ -47,8 +47,8 @@ filter="True"
 reverse="True"
 card_template="""
 <li class='post'>
-    <a href='/stable-diffusion-pype-dev/{{ title.replace(".png", ".webp") }}'>
-        <img src='/stable-diffusion-pype-dev/{{ title.replace(".png", ".webp") }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
+    <a href='/{{ title.replace(".png", ".webp") }}'>
+        <img src='/{{ title.replace(".png", ".webp") }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
     </a>
     <details>
         <summary> command </summary>
@@ -64,8 +64,8 @@ filter="'automatic1111'in app_source"
 reverse="True"
 card_template="""
 <li class='post'>
-    <a href='/stable-diffusion-pype-dev/{{ title.replace(".png", ".webp") }}'>
-        <img src='/stable-diffusion-pype-dev/{{ title.replace(".png", ".webp") }}' alt='{{ prompt }}'>
+    <a href='/{{ title.replace(".png", ".webp") }}'>
+        <img src='/{{ title.replace(".png", ".webp") }}' alt='{{ prompt }}'>
     </a>
     <details>
         <summary> filter </summary>
@@ -84,8 +84,8 @@ filter="'Genesis'in command"
 reverse="True"
 card_template="""
 <li class='post'>
-    <a href='/stable-diffusion-pype-dev/{{ title.replace(".png", ".webp") }}'>
-        <img src='/stable-diffusion-pype-dev/{{ title.replace(".png", ".webp") }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
+    <a href='/{{ title.replace(".png", ".webp") }}'>
+        <img src='/{{ title.replace(".png", ".webp") }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
     </a>
     <details>
         <summary> command </summary>
