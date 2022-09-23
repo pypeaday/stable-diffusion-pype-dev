@@ -51,6 +51,10 @@ card_template="""
         <img src='/{{ title.replace(".png", ".webp") }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
     </a>
     <details>
+        <summary> filter </summary>
+        {{ app_source }} 
+    </details>
+    <details>
         <summary> command </summary>
         {{ command }} 
     </details>
@@ -87,6 +91,10 @@ card_template="""
     <a href='/{{ title.replace(".png", ".webp") }}'>
         <img src='/{{ title.replace(".png", ".webp") }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
     </a>
+    <details>
+        <summary> filter </summary>
+        {{ app_source }} 
+    </details>
     <details>
         <summary> command </summary>
         {{ command }} 
