@@ -40,7 +40,7 @@ dream = "cd ../stable-diffusion/ && .venv/bin/python scripts/dream.py --outdir .
 clean = "markata clean"
 build = "markata build"
 tui = "markata tui"
-serve = "python -m http.server 8000 --directory=markout"
+serve = "python -m http.server 8085 --directory=markout"
 clean-build = ['clean', 'build',]
-build-serve = ['clean', 'build', 'tui']
+build-serve = ['clean', 'build', 'serve']
 
