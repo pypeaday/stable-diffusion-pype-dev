@@ -48,7 +48,7 @@ reverse="True"
 card_template="""
 <li class='post'>
     <a href='/stable-diffusion-pype-dev/{{ title }}'>
-        <img src='/{{ title }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
+        <img src='/stable-diffusion-pype-dev/{{ title }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
     </a>
     <details>
         <summary> filter </summary>
@@ -69,7 +69,7 @@ reverse="True"
 card_template="""
 <li class='post'>
     <a href='/stable-diffusion-pype-dev/{{ title }}'>
-        <img src='/{{ title }}' alt='{{ prompt }}'>
+        <img src='/stable-diffusion-pype-dev/{{ title }}' alt='{{ prompt }}'>
     </a>
     <details>
         <summary> filter </summary>
@@ -89,7 +89,7 @@ reverse="True"
 card_template="""
 <li class='post'>
     <a href='/stable-diffusion-pype-dev/{{ title }}'>
-        <img src='/{{ title }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
+        <img src='/stable-diffusion-pype-dev/{{ title }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
     </a>
     <details>
         <summary> filter </summary>
