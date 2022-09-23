@@ -7,5 +7,6 @@ cp /home/nic/personal/stable-diffusion/outputs/img-samples/dream_web_log.txt dre
 
 # these images come from AUTOMATIC1111's webui, the filenames are the prompts
 rsync -r /home/nic/third-party/stable-diffusion-webui/outputs/txt2img-images/ AUTOMATIC1111-images
+rsync -r /home/nic/third-party/stable-diffusion-webui/outputs/txt2img-grids/ AUTOMATIC1111-images
 
 python sqooshem.py
