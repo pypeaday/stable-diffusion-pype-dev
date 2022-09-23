@@ -47,8 +47,8 @@ filter="True"
 reverse="True"
 card_template="""
 <li class='post'>
-    <a href='/{{ title.replace(".png", ".webp") }}'>
-        <img src='/{{ title.replace(".png", ".webp") }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
+    <a href='/{{ title }}'>
+        <img src='/{{ title }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
     </a>
     <details>
         <summary> filter </summary>
@@ -68,8 +68,8 @@ filter="'automatic1111'in app_source"
 reverse="True"
 card_template="""
 <li class='post'>
-    <a href='/{{ title.replace(".png", ".webp") }}'>
-        <img src='/{{ title.replace(".png", ".webp") }}' alt='{{ prompt }}'>
+    <a href='/{{ title }}'>
+        <img src='/{{ title }}' alt='{{ prompt }}'>
     </a>
     <details>
         <summary> filter </summary>
@@ -88,8 +88,8 @@ filter="'Genesis'in command"
 reverse="True"
 card_template="""
 <li class='post'>
-    <a href='/{{ title.replace(".png", ".webp") }}'>
-        <img src='/{{ title.replace(".png", ".webp") }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
+    <a href='/{{ title }}'>
+        <img src='/{{ title }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
     </a>
     <details>
         <summary> filter </summary>
