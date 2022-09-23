@@ -89,12 +89,17 @@ def configure(markata) -> None:
     markata.content_directories = [Path("static")]
 
 
+def _turn_original_png_path_to_static_webp_path(filepath: str):
+
+    return Path("static", Path(Path(filepath).name)).with_suffix(".webp")
+
+
 @hook_impl
 @register_attr("articles")
 def load(markata) -> None:
     prompts = Path("dream_log.txt").read_text().split("\n")
     markata.articles = [
-        Prompt(Path(pair[0]), pair[1])
+        Prompt(_turn_original_png_path_to_static_webp_path(pair[0]), pair[1])
         for p in prompts
         if len(pair := p.split(":")) == 2
     ]
@@ -103,7 +108,10 @@ def load(markata) -> None:
     web_based_articles: List[WebPrompt] = []
     for p in prompts:
         if len(pair := p.split(":")) == 16:
-            file, raw_data = Path(pair[0]), pair[1:]
+            file, raw_data = (
+                _turn_original_png_path_to_static_webp_path(pair[0]),
+                pair[1:],
+            )
             data = json.loads(":".join(raw_data))
             web_based_articles.append(WebPrompt(file, data))
 
