@@ -21,8 +21,8 @@ hooks = [
 "stable_diffusion_pype_dev.load"
 ]
 
-[[markata.head]]
-text = """
+[[markata.head.text]]
+value = """
 <style>
 img {
 width: 100%;
@@ -102,27 +102,24 @@ card_template="""
 </li>
 """
 
-[[markata.seo]]
+[[markata.head.meta]]
 name = "theme-color"
 content="#64A1DD"
 
-[[markata.seo]]
+[[markata.head.meta]]
 name = "twitter:creator"
 content="@pypeaday"
 
-[[markata.seo]]
+[[markata.head.meta]]
 name = "og:type"
-property = "og:type"
 content = "article"
 
-[[markata.seo]]
+[[markata.head.meta]]
 name = "og:author"
-property = "og:author"
 content = "Pypeaday"
 
-[[markata.seo]]
+[[markata.head.meta]]
 name = "og:site_name"
-property = "og:site_name"
 content = "Pypeaday"
 
 
