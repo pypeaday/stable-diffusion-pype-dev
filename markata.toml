@@ -18,6 +18,7 @@ hooks = [
 "markata.plugins.tui",
 "markata.plugins.copy_assets",
 "markata.plugins.feeds",
+"markata.plugins.post_template",
 "stable_diffusion_pype_dev.load"
 ]
 
