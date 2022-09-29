@@ -23,7 +23,7 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
-dependencies = ['markata>=0.5.0dev12']
+dependencies = ['markata>=0.5.0dev14']
 
 dynamic = ["version"]
 
