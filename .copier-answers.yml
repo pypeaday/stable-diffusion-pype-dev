@@ -1,0 +1,12 @@
+# Changes here will be overwritten by Copier
+_commit: v1
+_src_path: git+https://github.com/WaylonWalker/markata-blog-starter
+author_email: stable-diffusion-gallery@pype.dev
+author_fullname: Nicholas Payne
+author_twitter: '@pypeaday'
+description: My gallery of awesome (and not awesome) images generated with magic...
+    I mean Stable Diffusion
+project_name: My Stable Diffusion Gallery
+python_package_import_name: stable_diffusion_pype_dev
+url: https://pypeaday.github.io/stable-diffusion-pype-dev/
+

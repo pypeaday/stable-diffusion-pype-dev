@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "stable_diffusion_pype_dev"
+
+description = "My gallery of awesome (and not awesome) images generated with magic... I mean Stable Diffusion"
+
+readme = "README.md"
+requires-python = ">=3.7"
+license = "MIT"
+
+
+authors = [
+  { name = "Nicholas Payne", email = "stable-diffusion-gallery@pype.dev" },
+]
+
+
+dependencies = ['markata~=0.5.0.dev0']
+dynamic = ["version"]
+
+[tool.hatch.version]
+path = "stable_diffusion_pype_dev/__about__.py"
+
+[tool.hatch.envs.default]
+dependencies = [
+  "pyinstrument",
+]
+
+[tool.hatch.envs.default.scripts]
+clean = "markata clean"
+build = "markata build"
+tui = "markata tui"
+serve = "python -m http.server 8000 --directory=markout"
+clean-build = ['clean', 'build',]
+clean-tui = ['clean', 'build', 'tui']
