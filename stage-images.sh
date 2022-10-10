@@ -9,4 +9,7 @@ cp /home/nic/personal/stable-diffusion/outputs/img-samples/dream_web_log.txt dre
 rsync -r /home/nic/third-party/stable-diffusion-webui/outputs/txt2img-images/ AUTOMATIC1111-images
 rsync -r /home/nic/third-party/stable-diffusion-webui/outputs/txt2img-grids/ AUTOMATIC1111-images
 
+# convert .jpg to .png for sqooshing
+ls -1 AUTOMATIC1111-images/*.jpg | xargs -n 1 bash -c 'convert "$0" "${0%.jpg}.png"'
+
 python sqooshem.py
