@@ -1,106 +1,59 @@
-# markata-blog-starter
+# stable-diffusion-pype-dev
 
-This is a blog starter for the python static site generator `markata`.
+[Check it out here!](https://pypeaday.github.io/stable-diffusion-pype-dev/)
 
-## New blog from template
+[![PyPI - Version](https://img.shields.io/pypi/v/stable-diffusion-pype-dev.svg)](https://pypi.org/project/stable-diffusion-pype-dev)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/stable-diffusion-pype-dev.svg)](https://pypi.org/project/stable-diffusion-pype-dev)
 
-The markata cli includes a `new` command that will present you with questions
-to fill in the jinja variables in this repo.
+-----
 
-``` bash
-pipx install markata
-markata new blog [directory]
+**Table of Contents**
+
+- [Usage](#usage)
+- [Installation](#installation)
+- [License](#license)
+
+## Usage
+
+The setup for this workflow is not really ideal but small-enough scale that it works out OK...
+
+1. Assuming a parent directory for git repos, say `~/git`
+2. Clone repos as follows:
+
+```bash
+cd ~/git
+
+git clone https://github.com/pypeaday/stable-diffusion-pype-dev.git
+
+# I list my fork of invoke-ai/InvokeAI's repo because on my branch nic are some
+# requirements fixes for my python setup -> this is improtant for a filepath later
+# git clone https://github.com/invoke-ai/InvokeAI.git
+git clone https://github.com/pypeaday/stable-diffusion.git
+git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
+
 ```
 
-Alternatively using copier directly
+3. Setup the stable-diffusion application repos as you wish - this isn't a
+   guide supplementing either of their setup instructions at all
 
-``` bash
-pipx install copier
-pip install copier
+4. Run `stage-images.sh` which will copy all pngs from both stable-diffusion
+   repos into source folders in this project, as well as the prompt logs from
+   InvokeAI's dream server(s). And then it'll run `sqooshem.py` which will log
+   to a json where each image (by name) came from and sqoosh the png into a
+   webp and put that in `static`
 
-copier git+https://github.com/WaylonWalker/markata-blog-starter [directory]
+The following command will get you a markata site with images and commands displayed!
+
+```console
+pipx run hatch run build-serve
 ```
-
-> Note: make sure you specify the [directory] that youu want your site to be
-> created into, not [directory]
 
 ## Installation
 
-This site comes with a `pyproject.toml` that can be used by hatch to
-automatically take care of your virtual environments for you.
-
-``` bash
-pip install hatch
-```
-
-## Building the site, Leveraging Hatch
-
-Hatch comes with a nice system for creating scirpts that you can run in your
-managed virtual environment with less effort of managing.  You can create any
-that you want in your own `pyproject.toml`, but these come with the template
-out of the box.
-
-``` bash
-# builds the site
-hatch run build
-
-# clean's cache and output directory
-hatch run clean
-
-# clean's cache and output directory, and builds
-hatch run clean-build
-
-# runs a development server, watches for changes and rebuilds.
-hatch run tui
-
-# run's clean then start's the tui
-hatch run clean-tui
-```
-
-> Hatch takes care of the venv for you
-
-## Building the site, vanilla
-
-You will want to install everything in a virtual environment to prevent
-yourself from clogging up your system python, or trying to run two versions of
-`markata` for different projects.
-
-``` bash
-# using hatch for the virtual environment
-hatch shell
-
-# using venv
-python -m venv .venv
-. ./.venv/bin/activate
-pip install -e .
-```
-
-Once you have your virtual environment created and activated you can use the
-markata cli plugin to build your site.
-
-``` bash
-# builds the site
-markata build
-
-# clean's cache and output directory
-markata clean
-
-# runs a development server, watches for changes and rebuilds.
-markata tui
-```
-
-## repl or script
-
-It's also possible to run the build from a repl like ipython or a python
-script.
-
-``` python
-from markata import Markata
-
-m = Markata()
-m.run()
+```console
+pip install .  # no package published
 ```
 
 ## License
 
-`markata-blog-starter` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
+`stable-diffusion-pype-dev` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
