@@ -9,9 +9,19 @@
 
 **Table of Contents**
 
+- [Deps](#Dependencies)
 - [Usage](#usage)
 - [Installation](#installation)
 - [License](#license)
+
+## Dependencies
+
+Some of the settings in AUTOMATIC1111's web ui save files as .jpg but
+`sqooshem.py` I originally wrote only for .png files. So you can use
+`ImageMagick` to automatically convert all .jpg to .png, then the rest happens
+automagically
+
+`sudo apt install imagemagick`
 
 ## Usage
 
