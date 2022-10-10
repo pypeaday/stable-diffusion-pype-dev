@@ -206,24 +206,104 @@ name = "theme-color"
 content="#322D39"
 
 
-## markata.plugins.feeds configuration
+[[markata.head.text]]
+value = """
+<style>
+img {
+width: 100%;
+height: auto;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  flex: 1 2 400px;
+}
+</style>
+
+"""
+
+
 [markata.feeds.archive]
-# creates a feed at /archive
-filter="date<=today and post.get('published', False)"
-sort="date"
-
-[markata.feeds.all]
-# creates a feed at /all
+title="archive"
 filter="True"
-sort="date"
+reverse="True"
+card_template="""
+<li class='post'>
+    <a href='/stable-diffusion-pype-dev/{{ title }}'>
+        <img src='/stable-diffusion-pype-dev/{{ title }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
+    </a>
+    <details>
+        <summary> filter </summary>
+        {{ app_source }} 
+    </details>
+    <details>
+        <summary> command </summary>
+        {{ command }} 
+    </details>
+</li>
+"""
 
-[markata.feeds.published]
-# creates a feed at /published
-filter="date<=today and post.get('published', False)"
-sort="date"
 
-[markata.feeds.draft]
-# creates a feed at /draft
-filter="date>today or not post.get('published', False)"
-sort="date"
+[markata.feeds.automatic1111]
+title="Automatic1111"
+filter="'automatic1111' in app_source"
+reverse="True"
+card_template="""
+<li class='post'>
+    <a href='/stable-diffusion-pype-dev/{{ title }}'>
+        <img src='/stable-diffusion-pype-dev/{{ title }}' alt='{{ prompt }}'>
+    </a>
+    <details>
+        <summary> filter </summary>
+        {{ app_source }} 
+    </details>
+    <details>
+        <summary> command </summary>
+        {{ command }} 
+    </details>
+</li>
+"""
+
+[markata.feeds.olivet]
+title="Olivet"
+filter="'Genesis' in command"
+reverse="True"
+card_template="""
+<li class='post'>
+    <a href='/stable-diffusion-pype-dev/{{ title }}'>
+        <img src='/stable-diffusion-pype-dev/{{ title }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
+    </a>
+    <details>
+        <summary> filter </summary>
+        {{ app_source }} 
+    </details>
+    <details>
+        <summary> command </summary>
+        {{ command }} 
+    </details>
+</li>
+"""
+
+[markata.feeds.oil_painted_church]
+title="Oil Paintec Church"
+filter="'bright church building' in command"
+reverse="True"
+card_template="""
+<li class='post'>
+    <a href='/stable-diffusion-pype-dev/{{ title }}'>
+        <img src='/stable-diffusion-pype-dev/{{ title }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
+    </a>
+    <details>
+        <summary> filter </summary>
+        {{ app_source }} 
+    </details>
+    <details>
+        <summary> command </summary>
+        {{ command }} 
+    </details>
+</li>
+"""
 
