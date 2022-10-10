@@ -3,7 +3,7 @@
 markout/
 *.db
 
-
+*.jpg
 *.png
 
 # Created by https://www.toptal.com/developers/gitignore/api/vim,node,data,emacs,python,pycharm,executable,sublimetext,visualstudio,visualstudiocode
