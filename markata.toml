@@ -30,21 +30,25 @@ edit = false
 
 # plugins to enable
 hooks = [
-    "stable_diffusion_pype_dev.load",
-   "markata.plugins.publish_source",
-   "markata.plugins.prevnext",
-   "markata.plugins.service_worker",
-    "default"
+    "markata.plugins.base_cli",
+    "markata.plugins.tui",
+    "markata.plugins.copy_assets",
+    "markata.plugins.feeds",
+    "markata.plugins.post_template",
+    "stable_diffusion_pype_dev.load"
 ]
 
 # plugins to disable
 disabled_hooks = [
     # seo is replaces by using markta.head.meta in config
     "markata.plugins.seo",  
+    "markata.plugins.datetime",
+    "markata.plugins.publish_html"
 ]
 
 ## Site Config
-url = "https://pypeaday.github.io/stable-diffusion-pype-dev/"
+# url = "https://pypeaday.github.io/stable-diffusion-pype-dev/"
+url = "http://ryzen-3600x:8000"
 description = "My gallery of awesome (and not awesome) images generated with magic... I mean Stable Diffusion"
 title = "My Stable Diffusion Gallery"
 rss_description = "My gallery of awesome (and not awesome) images generated with magic... I mean Stable Diffusion"
@@ -60,11 +64,16 @@ short_name = "My Stable Diffusion Gallery"
 display = "minimal-ui"
 icon = "icon.png"
 
+body_width='100vw'
 
 # use a different template than the built in one
 # post_template = "pages/templates/post_template.html"
 
 ## Color Theme
+color_link = "#64a1dd"
+color_accent = "#83dcc8cc"
+color_bg = '#1f2022'
+color_text = '#d8ebe6'
 # color_bg = '#1f2022'
 # color_bg_code = '#1f2022'
 # color_text = '#eefbfe'
@@ -107,7 +116,7 @@ len=250
 len=500
 
 [markata.auto_publish.filters]
-til="templateKey=='til' and date<=today and status != 'draft'"
+til="templateKey=='til' and date<=today and post.get('published', False) == True"
 
 ## SEO | <head>
 [[markata.head.text]]
@@ -233,8 +242,8 @@ filter="True"
 reverse="True"
 card_template="""
 <li class='post'>
-    <a href='/stable-diffusion-pype-dev/{{ title }}'>
-        <img src='/stable-diffusion-pype-dev/{{ title }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
+    <a href='/{{ title }}'>
+        <img src='/{{ title }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
     </a>
     <details>
         <summary> filter </summary>
@@ -254,8 +263,8 @@ filter="'automatic1111' in app_source"
 reverse="True"
 card_template="""
 <li class='post'>
-    <a href='/stable-diffusion-pype-dev/{{ title }}'>
-        <img src='/stable-diffusion-pype-dev/{{ title }}' alt='{{ prompt }}'>
+    <a href='/{{ title }}'>
+        <img src='/{{ title }}' alt='{{ prompt }}'>
     </a>
     <details>
         <summary> filter </summary>
@@ -274,8 +283,8 @@ filter="'Genesis' in command"
 reverse="True"
 card_template="""
 <li class='post'>
-    <a href='/stable-diffusion-pype-dev/{{ title }}'>
-        <img src='/stable-diffusion-pype-dev/{{ title }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
+    <a href='/{{ title }}'>
+        <img src='/{{ title }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
     </a>
     <details>
         <summary> filter </summary>
@@ -294,8 +303,8 @@ filter="'bright church building' in command"
 reverse="True"
 card_template="""
 <li class='post'>
-    <a href='/stable-diffusion-pype-dev/{{ title }}'>
-        <img src='/stable-diffusion-pype-dev/{{ title }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
+    <a href='/{{ title }}'>
+        <img src='/{{ title }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
     </a>
     <details>
         <summary> filter </summary>

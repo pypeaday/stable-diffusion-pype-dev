@@ -14,9 +14,9 @@ with open("source_app_map.json", "r") as f:
 class Prompt:
     file: Path
     command: str
-    status: str = "published"
 
     def __post_init__(self):
+        self.published = True
         self.title = self.file.name
         self.slug = self.file.name
         self.prompt = self.command.split('"')[1]
@@ -25,8 +25,11 @@ class Prompt:
         self.width = self.params["W"]
         self.app_source = "dream-console"
 
-    def __getitem__(self, key):
-        return self.to_dict()[key]
+    def __getitem__(self, key, default):
+        return self.to_dict().get(key, default)
+
+    def __setitem__(self, key, value):
+        self.__setattr__(key, value)
 
     def keys(self):
         return self.to_dict().keys()
@@ -34,14 +37,18 @@ class Prompt:
     def to_dict(self):
         return vars(self)
 
+    def get(self, key, default=None):
+        return self.__getitem__(key, default)
+
 
 @dataclass
 class WebPrompt:
     file: Path
     data: dict
-    status: str = "published"
 
     def __post_init__(self):
+
+        self.published = True
         self.title = self.file.name
         self.slug = self.file.name
         self.prompt = self.data["prompt"]
@@ -50,8 +57,11 @@ class WebPrompt:
         self.command = json.dumps(self.data)
         self.app_source = "dream-web"
 
-    def __getitem__(self, key):
-        return self.to_dict()[key]
+    def __getitem__(self, key, default):
+        return self.to_dict().get(key, default)
+
+    def __setitem__(self, key, value):
+        self.__setattr__(key, value)
 
     def keys(self):
         return self.to_dict().keys()
@@ -59,13 +69,17 @@ class WebPrompt:
     def to_dict(self):
         return vars(self)
 
+    def get(self, key, default=None):
+        return self.__getitem__(key, default)
+
 
 @dataclass
 class AUTOMATIC1111WebPrompt:
     file: Path
-    status: str = "published"
 
     def __post_init__(self):
+
+        self.published = True
         self.title = self.file.name
         self.slug = self.file.name
         self.prompt = self.file.name
@@ -74,14 +88,20 @@ class AUTOMATIC1111WebPrompt:
         self.command = self.file.name
         self.app_source = "automatic1111"
 
-    def __getitem__(self, key):
-        return self.to_dict()[key]
+    def __getitem__(self, key, default):
+        return self.to_dict().get(key, default)
+
+    def __setitem__(self, key, value):
+        self.__setattr__(key, value)
 
     def keys(self):
         return self.to_dict().keys()
 
     def to_dict(self):
         return vars(self)
+
+    def get(self, key, default=None):
+        return self.__getitem__(key, default)
 
 
 @hook_impl
