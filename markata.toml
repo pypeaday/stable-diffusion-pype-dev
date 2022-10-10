@@ -30,6 +30,7 @@ edit = false
 
 # plugins to enable
 hooks = [
+    "stable_diffusion_pype_dev.load",
    "markata.plugins.publish_source",
    "markata.plugins.prevnext",
    "markata.plugins.service_worker",
