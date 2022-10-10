@@ -1,0 +1,75 @@
+outputs/img-samples/000001.1825756978.png: "oil painting of Archenland and King Lune from the Chronicles of Narnia with Mt. Pire in the background" -s50 -W512 -H512 -C7.5 -Ak_lms -S1825756978
+outputs/img-samples/000002.2185038198.png: "harry potter flying on a firebolt around a fire breathing dragon at dusk" -s50 -W512 -H512 -C7.5 -Ak_lms -S2185038198
+outputs/img-samples/000003.3055659527.png: "harry potter flying on a broomstick being chased by a dragon with hogwarts in the background at dusk in watercolor" -s50 -W512 -H512 -C7.5 -Ak_lms -S3055659527
+outputs/img-samples/000004.909415801.png: "watercolor painting of harry potter flying on a broomstick with hogwarts in the background at dusk" -s50 -W512 -H512 -C7.5 -Ak_lms -S909415801
+outputs/img-samples/000005.3409961086.png: "black and white realism tattoo of garden with 2 trees and a river with planets and galaxies on the horizon" -s50 -W512 -H512 -C7.5 -Ak_lms -S3409961086
+outputs/img-samples/000006.167126321.png: "black and white realistic drawing of a garden with 2 trees and a river with planets and galaxies on the horizon" -s50 -W512 -H512 -C7.5 -Ak_lms -S167126321
+outputs/img-samples/000007.3000423730.png: "black and white realism of a garden with 2 trees and a river with planets and galaxies on the horizon" -s50 -W512 -H512 -C7.5 -Ak_lms -S3000423730
+outputs/img-samples/000008.1264681637.png: "grayscale realism of an oasis with 2 trees and a river with planets and the cosmos in the background" -s50 -W512 -H512 -C7.5 -Ak_lms -S1264681637
+outputs/img-samples/000009.4145349496.png: "grayscale realism of an oasis with the tree of life and the tree of knowledge of good and evil and a river with planets and the cosmos in the background" -s50 -W512 -H512 -C7.5 -Ak_lms -S4145349496
+outputs/img-samples/000010.3907590469.png: "grayscale realism of an oasis with 2 trees, the tree of life and the tree of knowledge of good and evil, with planets and the cosmos in the background" -s50 -W512 -H512 -C7.5 -Ak_lms -S3907590469
+outputs/img-samples/000012.2627881475.png: "garden of eden with tree of life and tree of knowledge of good and evil" -s50 -W512 -H512 -C7.5 -Ak_lms -S2627881475
+outputs/img-samples/000013.3512395533.png: "mediterranean garden with tree of life and river of life in grayscale pencil" -s50 -W512 -H512 -C7.5 -Ak_lms -S3512395533
+outputs/img-samples/000014.2731274656.png: "mediterranean garden with tree of life and river of life and on the horizon are planets and space in grayscale pencil" -s50 -W512 -H512 -C7.5 -Ak_lms -S2731274656
+outputs/img-samples/000015.808338993.png: "mediterranean garden with tree of life and river of life floating in the cosmos in grayscale pencil" -s50 -W512 -H512 -C7.5 -Ak_lms -S808338993
+outputs/img-samples/000016.1147929073.png: "oil painting of steampunk rhino drinking tea" -s50 -W512 -H512 -C7.5 -Ak_lms -S1147929073
+outputs/img-samples/000017.2638677967.png: "pencil realism drawing of tropical garden with the Tree of Life and a river that has planets in the background" -s50 -W512 -H512 -C7.5 -Ak_lms -S2638677967
+outputs/img-samples/000018.811707614.png: "grayscale realism phtograph of tropical garden with the Tree of Life and a river that has planets in the background" -s50 -W512 -H512 -C7.5 -Ak_lms -S811707614
+outputs/img-samples/000019.777303360.png: "grayscale watercolor of tropical garden with the Tree of Life and a river that has planets visible on the horizon" -s50 -W512 -H512 -C7.5 -Ak_lms -S777303360
+outputs/img-samples/000020.4147607483.png: "greyscale realism sketch of a Mediterranean garden with the Tree of Life in it and a river flowing out of the tree" -s50 -W512 -H512 -C7.5 -Ak_lms -S4147607483
+outputs/img-samples/000021.2986520510.png: "greyscale detailed realism of a Mediterranean garden with the Tree of Life in it and a river flowing out of the tree" -s50 -W512 -H512 -C7.5 -Ak_lms -S2986520510
+outputs/img-samples/000022.895696973.png: "greyscale garden with The Tree of Life in deep space" -s50 -W512 -H512 -C7.5 -Ak_lms -S895696973
+outputs/img-samples/000023.3894265941.png: "oil painting of a steampunk rhino drinking a cup of tea" -s50 -W512 -H512 -C7.5 -Ak_lms -S3894265941
+outputs/img-samples/000024.895696973.png: "greyscale garden with The Tree of Life in deep space" -s50 -W512 -H512 -C7.5 -Ak_lms -S895696973
+outputs/img-samples/000025.895696973.png: "greyscale garden with The Tree of Life in deep space" -s100 -W512 -H512 -C7.5 -Ak_lms -S895696973
+outputs/img-samples/000026.3894265941.png: "greyscale garden with The Tree of Life in the cosmos with several planets and galaxies in the background" -s50 -W512 -H512 -C7.5 -Ak_lms -S3894265941
+outputs/img-samples/000027.952801806.png: "greyscale tropical garden around an oasis with the tree of knowledge all floating in the cosmos with several planets and galaxies in the background" -s50 -W512 -H512 -C7.5 -Ak_lms -S952801806
+outputs/img-samples/000028.574475106.png: "photo realism garden around an oasis with the tree of knowledge all floating in the cosmos " -s50 -W512 -H512 -C7.5 -Ak_lms -S574475106
+outputs/img-samples/000029.157629896.png: "photo realism tropical flowers around the tree of life with the cosmos in the background" -s50 -W512 -H512 -C7.5 -Ak_lms -S157629896
+outputs/img-samples/000030.1679407391.png: "unicorn" -s50 -W512 -H512 -C7.5 -Ak_lms -U 4.0 -S1679407391
+outputs/img-samples/000031.1640842220.png: "photo realism tropical flowers around the tree of life with the cosmos in the background" -s50 -W512 -H512 -C7.5 -Ak_lms -U 4.0 -S1640842220
+outputs/img-samples/000032.3866693381.png: "photo realism tropical flowers around the tree of life and put planets in the background" -s50 -W512 -H512 -C7.5 -Ak_lms -U 2.0 -S3866693381
+outputs/img-samples/000033.3043593111.png: "python codeing snake smoking a pipe in anime style" -s50 -W512 -H512 -C7.5 -Ak_lms -S3043593111
+outputs/img-samples/000034.2382618495.png: "photo realism picture of a snake smoking a pipe" -s50 -W512 -H512 -C7.5 -Ak_lms -S2382618495
+outputs/img-samples/000035.3233194477.png: "anime i of a snake smoking a pipe" -s50 -W512 -H512 -C7.5 -Ak_lms -S3233194477
+outputs/img-samples/000036.570796272.png: "anime image of a snake smoking a churchwarden pipe" -s50 -W512 -H512 -C7.5 -Ak_lms -S570796272
+outputs/img-samples/000037.1345097301.png: "anime image of a python smoking a churchwarden pipe" -s50 -W512 -H512 -C7.5 -Ak_lms -S1345097301
+outputs/img-samples/000038.2307521255.png: "detailed photo of a python smoking a churchwarden pipe" -s50 -W512 -H512 -C7.5 -Ak_lms -S2307521255
+outputs/img-samples/000039.1935359592.png: "detailed photo of a python smoking a long gandalf-pipe" -s50 -W512 -H512 -C7.5 -Ak_lms -S1935359592
+outputs/img-samples/000040.307164949.png: "detailed photo of a python holding a smoking long-stem pipe" -s50 -W512 -H512 -C7.5 -Ak_lms -S307164949
+outputs/img-samples/000041.543430022.png: "oil painting of abstract bright color central American landscape" -s50 -W512 -H512 -C7.5 -Ak_lms -S543430022
+outputs/img-samples/000042.2501345394.png: "oil painting of a python snake smoking a long stem pipe" -s50 -W750 -H180 -C7.5 -Ak_lms -S2501345394
+outputs/img-samples/000043.2165602496.png: "oil painting of a python snake smoking a long stem pipe" -s100 -W750 -H180 -C7.5 -Ak_lms -S2165602496
+outputs/img-samples/000044.1435086993.png: "oil painting of a python snake smoking a tabacco pipe" -s100 -W750 -H180 -C7.5 -Ak_lms -S1435086993
+outputs/img-samples/000045.3352264813.png: "oil painting of a snake smoking a tabacco pipe" -s100 -W750 -H180 -C7.5 -Ak_lms -S3352264813
+outputs/img-samples/000046.4149035121.png: "steampunk snake smoking a tabacco pipe" -s100 -W750 -H180 -C7.5 -Ak_lms -S4149035121
+outputs/img-samples/000047.3936069089.png: "steampunk snake smoking a tabacco pipe" -s200 -W750 -H180 -C7.5 -Ak_lms -S3936069089
+outputs/img-samples/000048.32572948.png: "nerdy python smoking a tabacco pipe" -s200 -W750 -H180 -C7.5 -Ak_lms -S32572948
+outputs/img-samples/000049.55154641.png: "tobacco pipe in the shape of a snake" -s200 -W750 -H180 -C7.5 -Ak_lms -S55154641
+outputs/img-samples/000050.1973594673.png: "tobacco pipe shaped like a python" -s200 -W750 -H180 -C7.5 -Ak_lms -S1973594673
+outputs/img-samples/000051.3465029241.png: "cyberpunk snake smoking a pipe" -s200 -W750 -H180 -C7.5 -Ak_lms -S3465029241
+outputs/img-samples/000052.161545734.png: "cosmic snake smoking a pipe" -s50 -W512 -H512 -C7.5 -Ak_lms -S161545734
+outputs/img-samples/000053.1676030581.png: "oil painting of cyberpunk snake smoking weed" -s50 -W512 -H512 -C7.5 -Ak_lms -S1676030581
+outputs/img-samples/000054.1701045955.png: "fantasy style snake smoking a pipe" -s50 -W512 -H512 -C7.5 -Ak_lms -S1701045955
+outputs/img-samples/000055.2906872497.png: "fantasy style snake smoking a pipe" -s100 -W512 -H512 -C7.5 -Ak_lms -S2906872497
+outputs/img-samples/000056.3658195540.png: "fantasy style snake smoking a pipe" -s50 -W704 -H128 -C7.5 -Ak_lms -S3658195540
+outputs/img-samples/000057.633668648.png: "cyberpunk style snake smoking a pipe" -s50 -W704 -H128 -C7.5 -Ak_lms -S633668648
+outputs/img-samples/000058.2912822521.png: "cyberpunk style snake smoking a pipe" -s500 -W704 -H128 -C7.5 -Ak_lms -S2912822521
+outputs/img-samples/000059.275370527.png: "cyberpunk style snake smoking a pipe" -s20 -W704 -H128 -C7.5 -Ak_lms -S275370527
+outputs/img-samples/000060.1806097591.png: "cyberpunk style snake smoking a pipe" -s25 -W704 -H128 -C7.5 -Ak_lms -S1806097591
+outputs/img-samples/000061.4230428847.png: "cyberpunk style snake smoking a pipe" -s100 -W704 -H128 -C7.5 -Ak_lms -S4230428847
+outputs/img-samples/000062.1514747490.png: "snake in a hoodie smoking a pipe" -s100 -W704 -H128 -C7.5 -Ak_lms -S1514747490
+outputs/img-samples/000063.2851561059.png: "snake wearing a hoodie smoking a pipe" -s50 -W512 -H512 -C7.5 -Ak_lms -S2851561059
+outputs/img-samples/000064.258769787.png: "oil painting of a snake wearing a hoodie and smoking a pipe" -s100 -W704 -H128 -C7.5 -Ak_lms -S258769787
+outputs/img-samples/000065.1511017669.png: "oil painting of a snake wearing a hoodie and smoking a pipe" -s50 -W512 -H512 -C7.5 -Ak_lms -S1511017669
+outputs/img-samples/000066.602115448.png: "laptop on fire" -s50 -W704 -H128 -C7.5 -Ak_lms -S602115448
+outputs/img-samples/000118.253206327.png: "Genesis Biblical creation light world stars heaven LORD glory, eden, garden, sunlight, warmth, earth, in the style of pastel art deco" -s50 -W512 -H512 -C7.5 -Ak_lms -S253206327
+outputs/img-samples/000118.3038216063.png: "Genesis Biblical creation light world stars heaven LORD glory, eden, garden, sunlight, warmth, earth, in the style of pastel art deco" -s50 -W512 -H512 -C7.5 -Ak_lms -S3038216063
+outputs/img-samples/000118.3358462472.png: "Genesis Biblical creation light world stars heaven LORD glory, eden, garden, sunlight, warmth, earth, in the style of pastel art deco" -s50 -W512 -H512 -C7.5 -Ak_lms -S3358462472
+outputs/img-samples/000118.4079985794.png: "Genesis Biblical creation light world stars heaven LORD glory, eden, garden, sunlight, warmth, earth, in the style of pastel art deco" -s50 -W512 -H512 -C7.5 -Ak_lms -S4079985794
+outputs/img-samples/000118.2013020786.png: "Genesis Biblical creation light world stars heaven LORD glory, eden, garden, sunlight, warmth, earth, in the style of pastel art deco" -s50 -W512 -H512 -C7.5 -Ak_lms -S2013020786
+outputs/img-samples/000118.794812362.png: "Genesis Biblical creation light world stars heaven LORD glory, eden, garden, sunlight, warmth, earth, in the style of pastel art deco" -s50 -W512 -H512 -C7.5 -Ak_lms -S794812362
+outputs/img-samples/000118.2418556471.png: "Genesis Biblical creation light world stars heaven LORD glory, eden, garden, sunlight, warmth, earth, in the style of pastel art deco" -s50 -W512 -H512 -C7.5 -Ak_lms -S2418556471
+outputs/img-samples/000118.2684939719.png: "Genesis Biblical creation light world stars heaven LORD glory, eden, garden, sunlight, warmth, earth, in the style of pastel art deco" -s50 -W512 -H512 -C7.5 -Ak_lms -S2684939719
+outputs/img-samples/000118.751950019.png: "Genesis Biblical creation light world stars heaven LORD glory, eden, garden, sunlight, warmth, earth, in the style of pastel art deco" -s50 -W512 -H512 -C7.5 -Ak_lms -S751950019
+outputs/img-samples/000118.235164613.png: "Genesis Biblical creation light world stars heaven LORD glory, eden, garden, sunlight, warmth, earth, in the style of pastel art deco" -s50 -W512 -H512 -C7.5 -Ak_lms -S235164613
