@@ -23,28 +23,33 @@ class Image:
 
     def __post_init__(self):
         # stupidedly glob over all the files to find this one
+        # necessary for automatic1111 cause there's 4 possible directories between outputs and the actual image
         for _pic in Path(pics_root).glob("**/*.png"):
             if _pic.name == self.name:
-                self.path = _pic
+                self.source_png_path = _pic
                 break
+        if self.source == "AUTOMATIC1111":
+            self.repo_png_path = Path("AUTOMATIC1111-images", self.name)
+        elif self.source == "InvokeAI":
+            raise NotImplementedError
+        self.repo_webp_path = Path("static", Path(self.name).with_suffix(".webp"))
 
     def delete(self):
         # delete the file
-        try:
+        if self.repo_png_path.exists():
             # if there's no image then unlink won't work. This might happen if an image gets deleted but the entry didn't get removed from source_app_map somehow
-            self.path.unlink()
-        except Exception:
-            breakpoint()
-        try:
+            self.repo_png_path.unlink()
+        else:
+            pass
+            # breakpoint()
+        if self.source_png_path.exists():
             # also make sure to try to remove the png in this repo
-            Path("AUTOMATIC1111-images", self.path.name).unlink()
-        except Exception:
-            breakpoint()
-        try:
+            self.source_png_path.unlink()
+        if self.repo_webp_path.exists():
             # also make sure to try to remove the web in static
-            Path("static", Path(self.path.name).with_suffix(".webp")).unlink()
-        except Exception:
-            breakpoint()
+            self.repo_webp_path.unlink()
+        else:
+            pass
         # remove it from source_app_map
         source_app_map.pop(self.name)
         # re-create the file
