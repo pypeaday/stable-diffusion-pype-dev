@@ -1,4 +1,5 @@
 import json
+import pickle
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -51,24 +52,37 @@ class Image:
             json.dump(source_app_map, f)
 
 
+def serialize_image_containers():
+    try:
+        images = pickle.load(open("image_cleaning.pkl", "rb"))
+        return [x for x in images if x.name not in source_app_map_golden.keys()]
+
+    except:
+        print("failed loading pickle")
+        images = []
+        # loop over all tracked pics (pngs) and source (automatic1111 or invokeai)
+        for pic, source in source_app_map.items():
+            # if I decided to keep it, pass
+            if pic in source_app_map_golden.keys():
+                print(f"Already keeping {pic} in golden list")
+                continue
+            # create data structure for ease
+            elif source == "AUTOMATIC1111":
+                # source as variable in case I can actually use this dataclass easily for both automatic1111 and invokeAI
+                images.append(Image(pic, source))
+                ...
+            elif source == "InvokeAI":
+                # for InvokeAI repo images
+                ...
+            else:
+                breakpoint()
+
+        pickle.dump(images, open("image_cleaning.pkl", "wb"))
+        return images
+
+
 if __name__ == "__main__":
-    images = []
-    # loop over all tracked pics (pngs) and source (automatic1111 or invokeai)
-    for pic, source in source_app_map.items():
-        # if I decided to keep it, pass
-        if pic in source_app_map_golden.keys():
-            print(f"Already keeping {pic} in golden list")
-            continue
-        # create data structure for ease
-        elif source == "AUTOMATIC1111":
-            # source as variable in case I can actually use this dataclass easily for both automatic1111 and invokeAI
-            images.append(Image(pic, source))
-            ...
-        elif source == "InvokeAI":
-            # for InvokeAI repo images
-            ...
-        else:
-            breakpoint()
+    images = serialize_image_containers()
     for image in images:
         try:
             image.path
@@ -77,6 +91,14 @@ if __name__ == "__main__":
             image.delete()
             continue
         # open the image
+        if not Path(image.path).exists():
+            # need to re-pickle otherwise next time we'll get FileNotFoundErrors
+            pickle.dump(
+                [x for x in images if x.name != image.name],
+                open("image_cleaning.pkl", "wb"),
+            )
+            continue
+
         with PillowImage.open(image.path) as im:
             im.show()
             keep = input("Keep? ")
@@ -84,10 +106,16 @@ if __name__ == "__main__":
                 # delete the source png, the webp in static, and the record in source_app_map_golden
                 # note: automatic1111 doesn't store prompt history, it is the filename. InvokeAI DOES store between a couple different text files to be aware of
                 image.delete()
+
             elif "y" in keep.lower():
                 source_app_map_golden[image.name] = image.source
                 with open("source_app_map_golden.json", "w") as f:
                     json.dump(source_app_map_golden, f)
+                # need to re-pickle otherwise next time we'll just load up images we already decided to keep
+                pickle.dump(
+                    [x for x in images if x.name != image.name],
+                    open("image_cleaning.pkl", "wb"),
+                )
             else:
                 print(f"No decision made - passing on {image.name}")
         im.close()
