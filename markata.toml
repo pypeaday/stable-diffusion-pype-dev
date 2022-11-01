@@ -246,12 +246,12 @@ card_template="""
         <img src='/{{ title }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
     </a>
     <details>
-        <summary> filter </summary>
-        {{ app_source }} 
+        <summary> params </summary>
+        {{ params }} 
     </details>
     <details>
         <summary> command </summary>
-        {{ command }} 
+        {{ prompt }} 
     </details>
 </li>
 """
@@ -267,12 +267,12 @@ card_template="""
         <img src='/{{ title }}' alt='{{ prompt }}'>
     </a>
     <details>
-        <summary> filter </summary>
-        {{ app_source }} 
+        <summary> params </summary>
+        {{ params }} 
     </details>
     <details>
         <summary> command </summary>
-        {{ command }} 
+        {{ prompt }} 
     </details>
 </li>
 """
@@ -287,12 +287,12 @@ card_template="""
         <img src='/{{ title }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
     </a>
     <details>
-        <summary> filter </summary>
-        {{ app_source }} 
+        <summary> params </summary>
+        {{ params }} 
     </details>
     <details>
         <summary> command </summary>
-        {{ command }} 
+        {{ prompt }} 
     </details>
 </li>
 """
@@ -307,12 +307,12 @@ card_template="""
         <img src='/{{ title }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
     </a>
     <details>
-        <summary> filter </summary>
-        {{ app_source }} 
+        <summary> params </summary>
+        {{ params }} 
     </details>
     <details>
         <summary> command </summary>
-        {{ command }} 
+        {{ prompt }} 
     </details>
 </li>
 """
