@@ -14,7 +14,16 @@
 - [Installation](#installation)
 - [License](#license)
 
+## Note
+
+Only supporting AUTOMATIC1111's web ui right now
+
+!! I recommend for my gallery to be smooth to go into AUTOMATIC1111's web ui
+settings and disable jpg saving. Otherwise you can convert jpgs to png as
+discussed below
+
 ## Dependencies
+
 
 Some of the settings in AUTOMATIC1111's web ui save files as .jpg but
 `sqooshem.py` I originally wrote only for .png files. So you can use
@@ -38,7 +47,7 @@ git clone https://github.com/pypeaday/stable-diffusion-pype-dev.git
 # I list my fork of invoke-ai/InvokeAI's repo because on my branch nic are some
 # requirements fixes for my python setup -> this is improtant for a filepath later
 # git clone https://github.com/invoke-ai/InvokeAI.git
-git clone https://github.com/pypeaday/stable-diffusion.git
+<!-- git clone https://github.com/pypeaday/stable-diffusion.git -->
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 
 ```
