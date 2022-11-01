@@ -48,7 +48,7 @@ disabled_hooks = [
 
 ## Site Config
 # url = "https://pypeaday.github.io/stable-diffusion-pype-dev/"
-url = "http://ryzen-3600x:8000"
+url = "http://babyblue:8000"
 description = "My gallery of awesome (and not awesome) images generated with magic... I mean Stable Diffusion"
 title = "My Stable Diffusion Gallery"
 rss_description = "My gallery of awesome (and not awesome) images generated with magic... I mean Stable Diffusion"
