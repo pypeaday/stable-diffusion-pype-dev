@@ -52,19 +52,34 @@ git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 
 ```
 
+2a. In `stable-diffusion-pype-dev` you'll need a few files made or renamed:
+    * `.env` -> I include `.env.example` that you can just rename to `.env` and configure the paths for `AUTOMATIC1111_ROOT` and `INVOKEAI_ROOT`
+    * `source_app_map.json` needs to be a blank json file at first -> you can just rename `source_app_map.json.example` to `source_app_map.json`
+    * same story for `source_app_map_golden.json`
+
 3. Setup the stable-diffusion application repos as you wish - this isn't a
    guide supplementing either of their setup instructions at all
 
-4. Run `stage-images.sh` which will copy all pngs from both stable-diffusion
-   repos into source folders in this project, as well as the prompt logs from
-   InvokeAI's dream server(s). And then it'll run `sqooshem.py` which will log
-   to a json where each image (by name) came from and sqoosh the png into a
-   webp and put that in `static`
+4. Run `sqooshem.py` which will log to `source_app_map.json` where each image (by full path) came from and sqoosh the png into a webp and put that in `static`
+
+> source_app_map.json is in place of a database just to get me going -> eventually I'll put a little sqlite thing together
+
+# NOTE 
+
+I have a streamlit app coming for filtering out images you don't want in your
+gallery. For now if you need this functionality you can use
+`interactive_clean.py` which will just iterate through pictures one at a time,
+and ask if you want to keep it or not. If you type `y` then the image is logged
+to `source_app_map_golden.json` and if you type `n` then the image (source and
+webp if it's been sqooshed) will be deleted, including the prompt file from
+AUTOMATIC1111 if it exists, or if it's from InvokeAI's webui then the
+corresponding line in the prompt file will also be deleted... It'll be as if
+that image never existed
 
 The following command will get you a markata site with images and commands displayed!
 
 ```console
-pipx run hatch run build-serve
+pipx run hatch run clean-serve
 ```
 
 ## Installation
