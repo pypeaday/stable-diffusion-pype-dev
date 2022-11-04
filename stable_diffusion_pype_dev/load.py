@@ -1,13 +1,12 @@
 """prompt loader"""
 import json
 from pathlib import Path
-from typing import List
 
 from markata.hookspec import hook_impl, register_attr
 
-from .automatic1111_model import AUTOMATIC1111WebPrompt
-from .invokeai_model import Prompt, WebPrompt
-# from .invokeai_model import WebPrompt, Prompt
+from .models import AUTOMATIC1111WebPrompt
+
+# from .models import WebPrompt, Prompt
 
 with open("source_app_map.json", "r") as f:
     source_app_map = json.load(f)
@@ -47,7 +46,8 @@ def load(markata) -> None:
     #         web_based_articles.append(WebPrompt(file, data))
 
     automatic1111_data = (
-        Path("static", Path(k).with_suffix(".webp"))
+        # regardless of which suboutput folder the source images are in, I store them flat in static - so just check for the webp version of the picture in this repo
+        Path("static", Path(Path(k).name).with_suffix(".webp"))
         for k, v in source_app_map.items()
         if v == "AUTOMATIC1111"
     )
