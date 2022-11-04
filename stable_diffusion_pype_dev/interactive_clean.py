@@ -1,9 +1,13 @@
 import json
+import os
 import pickle
 from dataclasses import dataclass
 from pathlib import Path
 
+from dotenv import load_dotenv
 from PIL import Image as PillowImage
+
+load_dotenv()
 
 with open("source_app_map.json", "r") as f:
     source_app_map = json.load(f)
@@ -12,8 +16,8 @@ with open("source_app_map_golden.json", "r") as f:
     source_app_map_golden = json.load(f)
 
 
-automatic1111_pics_root = "/home/nic/third-party/stable-diffusion-webui/outputs/"
-invokeai_pics_root = "/home/nic/personal/stable-diffusion/outputs/"
+automatic1111_pics_root = f"{os.environ['AUTOMATIC1111_ROOT']}/outputs/"
+invokeai_pics_root = f"{os.environ['INVOKEAI_ROOT']}/outputs/"
 
 
 AUTOMATIC1111_IMAGES = [im for im in Path(automatic1111_pics_root).glob("**/*.png")]
