@@ -45,7 +45,7 @@ class AUTOMATIC1111WebPrompt:
 
     def _setup_params_without_file(self):
         """ """
-        self.prompt = self.path.name
+        self.prompt = self.file.name
         with Image.open(str(self.file)) as im:
             self.width = im.width
             self.height = im.height

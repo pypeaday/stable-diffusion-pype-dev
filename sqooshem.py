@@ -39,7 +39,7 @@ for file in autos_files:
     if Path("static", file.name).with_suffix(".webp").exists():
         if file.name not in source_app_map.keys():
             # print(f"{file.name} did not exist in source_app_map")
-            source_app_map[file.name] = "AUTOMATIC1111"
+            source_app_map[str(file)] = "AUTOMATIC1111"
         continue
 
     cmd = (
@@ -51,7 +51,7 @@ for file in autos_files:
     proc = Popen(cmd, shell=True)
     proc.wait()
 
-    source_app_map[file.name] = "AUTOMATIC1111"
+    source_app_map[str(file)] = "AUTOMATIC1111"
 
 
 with open("source_app_map.json", "w") as f:
