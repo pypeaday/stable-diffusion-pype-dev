@@ -29,11 +29,11 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: install markata
-        run: pip install markata
+      - name: install pipx
+        run: pip install pipx
 
       - name: build with markata
-        run: markata build
+        run: pipx run hatch run build
 
       - name: GitHub Pages
         uses: crazy-max/ghaction-github-pages@v3.0.0
