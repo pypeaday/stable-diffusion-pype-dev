@@ -1,11 +1,16 @@
 """module for processing images out of AUTOMATIC1111's repo"""
 
 import json
+import os
 import re
 from dataclasses import dataclass
 from pathlib import Path
 
+from dotenv import load_dotenv
 from PIL import Image
+
+# source env variables
+load_dotenv()
 
 
 @dataclass
@@ -130,17 +135,15 @@ class WebPrompt:
     def __post_init__(self):
 
         self.prompt_file = Path(
-            "/home/nic/personal/stable-diffusion/outputs/img-samples/dream_web_log.txt"
+            f"{os.environ.get('INVOKEAI_ROOT')}/outputs/img-samples/dream_web_log.txt"
         )
         self.published = True
         self.rel_image_path = entry.split(":")[0]
         _pattern = "{(.*?)}"
         self.raw_params_data = re.findall(_pattern, entry)[0].split(",")
-        self.params = {
-            strip(l.split(":")[0]): strip(l.split(":")[1]) for l in self.raw_params_data
-        }
+        self.params = {}
         self.title = self.file.name
-        self.file = Path("/home/nic/personal/stable-diffusion/", self.rel_image_path)
+        self.file = Path(f"{os.environ.get('INVOKEAI_ROOT')}", self.rel_image_path)
         self.slug = self.file.name
         self.prompt = self.data["prompt"]
         self.height = self.data["height"]
