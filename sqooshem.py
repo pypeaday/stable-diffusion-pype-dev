@@ -1,15 +1,18 @@
 import json
+import os
 from pathlib import Path
 from subprocess import Popen
+
+from dotenv import load_dotenv
+
+load_dotenv()
 
 with open("source_app_map.json", "r") as f:
     source_app_map = json.load(f)
 
 
-files = Path("/home/nic/personal/stable-diffusion/outputs/").glob("**/*.png")
-autos_files = Path("/home/nic/third-party/stable-diffusion-webui/outputs/").glob(
-    "**/*.png"
-)
+files = Path(f"{os.environ['INVOKEAI_ROOT']}/outputs/").glob("**/*.png")
+autos_files = Path(f"{os.environ['AUTOMATIC1111_ROOT']}/outputs/").glob("**/*.png")
 
 
 # for file in files:
