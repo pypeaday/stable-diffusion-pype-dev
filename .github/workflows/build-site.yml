@@ -39,7 +39,7 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v3.0.0
         with:
           # you can choose the target branch of your choice
-          target_branch: prod-markata
+          target_branch: prod
           build_dir: markout
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
