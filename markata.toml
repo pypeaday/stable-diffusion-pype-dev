@@ -282,7 +282,7 @@ filter="'abstract oil painting of a bright church building' in prompt"
 reverse="True"
 card_template="""
 <li class='post'>
-    <a href='/{{ title }}'>
+    <a href='/stable-diffusion-pype-dev/{{ title }}'>
         <img src='/{{ title }}' alt='{{ prompt }}'>
     </a>
     <details>
