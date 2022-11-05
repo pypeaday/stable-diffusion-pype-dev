@@ -256,6 +256,46 @@ card_template="""
 </li>
 """
 
+[markata.feeds.bears_doing_jiu_jitsu_forest]
+title="Bears Doing Jiu-Jitsu in a Forest"
+filter="'bears doing jiu-jitsu in a forest' in prompt"
+reverse="True"
+card_template="""
+<li class='post'>
+    <a href='/{{ title }}'>
+        <img src='/{{ title }}' alt='{{ prompt }}'>
+    </a>
+    <details>
+        <summary> params </summary>
+        {{ params }} 
+    </details>
+    <details>
+        <summary> command </summary>
+        {{ prompt }} 
+    </details>
+</li>
+"""
+
+[markata.feeds.abstract_oil_painting_church]
+title="Abstract Oil Painting Church"
+filter="'abstract oil painting of a bright church building' in prompt"
+reverse="True"
+card_template="""
+<li class='post'>
+    <a href='/{{ title }}'>
+        <img src='/{{ title }}' alt='{{ prompt }}'>
+    </a>
+    <details>
+        <summary> params </summary>
+        {{ params }} 
+    </details>
+    <details>
+        <summary> command </summary>
+        {{ prompt }} 
+    </details>
+</li>
+"""
+
 
 [markata.feeds.automatic1111]
 title="Automatic1111"
