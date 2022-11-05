@@ -258,7 +258,7 @@ card_template="""
 
 [markata.feeds.bears_doing_jiu_jitsu_forest]
 title="Bears Doing Jiu-Jitsu in a Forest"
-filter="'bears doing jiu-jitsu in a forest' in prompt"
+filter="'bears doing jiu-jitsu' in prompt"
 reverse="True"
 card_template="""
 <li class='post'>
