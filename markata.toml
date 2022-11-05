@@ -242,7 +242,7 @@ filter="True"
 reverse="True"
 card_template="""
 <li class='post'>
-    <a href='/{{ title }}'>
+    <a href='/stable-diffusion-pype-dev/{{ title }}'>
         <img src='/{{ title }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
     </a>
     <details>
@@ -262,7 +262,7 @@ filter="'bears doing jiu-jitsu in a forest' in prompt"
 reverse="True"
 card_template="""
 <li class='post'>
-    <a href='/{{ title }}'>
+    <a href='/stable-diffusion-pype-dev/{{ title }}'>
         <img src='/{{ title }}' alt='{{ prompt }}'>
     </a>
     <details>
@@ -303,7 +303,7 @@ filter="'automatic1111' in app_source"
 reverse="True"
 card_template="""
 <li class='post'>
-    <a href='/{{ title }}'>
+    <a href='/stable-diffusion-pype-dev/{{ title }}'>
         <img src='/{{ title }}' alt='{{ prompt }}'>
     </a>
     <details>
@@ -323,7 +323,7 @@ filter="'Genesis' in prompt"
 reverse="True"
 card_template="""
 <li class='post'>
-    <a href='/{{ title }}'>
+    <a href='/stable-diffusion-pype-dev/{{ title }}'>
         <img src='/{{ title }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
     </a>
     <details>
@@ -343,7 +343,7 @@ filter="'bright church building' in prompt"
 reverse="True"
 card_template="""
 <li class='post'>
-    <a href='/{{ title }}'>
+    <a href='/stable-diffusion-pype-dev/{{ title }}'>
         <img src='/{{ title }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
     </a>
     <details>
