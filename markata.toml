@@ -256,7 +256,7 @@ card_template="""
 </li>
 """
 
-[markata.feeds.dolphin_jumpint]
+[markata.feeds.dolphins_storm]
 title="Dolphins and Storms"
 filter="'dolphin' in prompt or 'storm' in prompt"
 reverse="True"
