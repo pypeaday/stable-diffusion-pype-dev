@@ -2,9 +2,13 @@
 import json
 from pathlib import Path
 
+from dotenv import load_dotenv
 from markata.hookspec import hook_impl, register_attr
 
 from .models import AUTOMATIC1111WebPrompt
+
+# source env variables
+load_dotenv()
 
 # from .models import WebPrompt, Prompt
 
