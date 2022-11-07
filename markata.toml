@@ -242,8 +242,8 @@ filter="True"
 reverse="True"
 card_template="""
 <li class='post'>
-    <a href='/stable-diffusion-pype-dev/{{ title }}'>
-        <img src='/stable-diffusion-pype-dev/{{ title }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
+    <a href="/stable-diffusion-pype-dev/{{ title }}">
+        <img src="/stable-diffusion-pype-dev/{{ title }}" height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
     </a>
     <details>
         <summary> params </summary>
