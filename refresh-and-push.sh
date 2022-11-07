@@ -7,6 +7,7 @@
 python ./sqooshem.py
 
 git add ./static
+git add ./source_app_map.json
 
 git commit -m "regular update"
 
