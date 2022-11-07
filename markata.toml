@@ -262,8 +262,8 @@ filter="'Noah' in prompt"
 reverse="True"
 card_template="""
 <li class='post'>
-    <a href='/stable-diffusion-pype-dev/{{ title }}'>
-        <img src='/stable-diffusion-pype-dev/{{ title }}' alt='{{ prompt }}'>
+    <a href="/stable-diffusion-pype-dev/{{ title }}">
+        <img src="/stable-diffusion-pype-dev/{{ title }}" alt='{{ prompt }}'>
     </a>
     <details>
         <summary> params </summary>
