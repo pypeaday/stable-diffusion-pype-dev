@@ -1,6 +1,6 @@
 """prompt loader"""
-import json
 from pathlib import Path
+from typing import List
 
 from dotenv import load_dotenv
 from markata.hookspec import hook_impl, register_attr
