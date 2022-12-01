@@ -397,3 +397,24 @@ card_template="""
 </li>
 """
 
+
+[markata.feeds.warframe]
+title="Warframe"
+filter="'warframe' in prompt"
+reverse="True"
+card_template="""
+<li class='post'>
+    <a href='/stable-diffusion-pype-dev/{{ title }}'>
+        <img src='/stable-diffusion-pype-dev/{{ title }}' height='{{ height }}' width='{{ width }}' alt='{{ prompt }}'>
+    </a>
+    <details>
+        <summary> params </summary>
+        {{ params }} 
+    </details>
+    <details>
+        <summary> command </summary>
+        {{ prompt }} 
+    </details>
+</li>
+"""
+
